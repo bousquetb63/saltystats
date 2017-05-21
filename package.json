@@ -8,6 +8,9 @@
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
-    "socket.io": "~0.9.14"
+    "jQuery": "^1.7.4",
+    "materialize-css": "^0.98.2",
+    "socket.io": "~0.9.14",
+    "superagent": "^3.5.2"
   }
 }
