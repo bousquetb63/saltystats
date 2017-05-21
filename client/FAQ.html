@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" ng-app>
+    <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>FAQ</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/css/materialize.min.css">
+      <body>
+        <nav class="blue lighten-1">
+          <div class="nav-wrapper">
+            <div class="container">
+              <a class="brand-logo" href="https://projectsalt-bousquetb63.c9users.io">Salty Stats</a>
+            </div>
+            <a href="#" data-activates="moble-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <div class="container">
+              <ul class="right hide-on-med-and-down">
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+        <ul class="collapsible popout" data-collapsible="accordion" style="padding-top: 25px">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">question_answer</i>What Coding languages did you use?</div>
+            <div class="collapsible-body"><span>HTML, JavaScript, and CSS</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">question_answer</i>What Node.js extensions did you use?</div>
+            <div class="collapsible-body"><span>Express and jQuery</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">question_answer</i>Was this project hard?</div>
+            <div class="collapsible-body"><span>We wouldn't say the project was hard; it was more of a challenge that required a lot of research to finish.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">question_answer</i>What database did you use to obtain the game information?</div>
+            <div class="collapsible-body"><span>MongoDB</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">question_answer</i>What software did you use to code everything?</div>
+            <div class="collapsible-body"><span>c9.io (basically google drive for coding)</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">question_answer</i>My game was not selected. Can you add it to the list?</div>
+            <div class="collapsible-body"><span>Of course! Give us the game and we will try our best to add it.</span></div>
+          </li>
+        </ul>
+        </div>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/materialize.min.js"></script>
+        <script src="/js/angular.min.js"></script>
+        <script> 
+          $(document).ready(function(){
+          $('.collapsible').collapsible();});
+        </script>
+      </body>
+    </head>
+</html>
