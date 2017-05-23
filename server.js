@@ -2,6 +2,7 @@ var http = require('http');
 var path = require('path');
 var express = require('express');
 var request = require('superagent');
+var rsapi = require('runescape-api');
 var router = express();
 var server = http.createServer(router);
 
@@ -23,6 +24,7 @@ router.get('/account/:username/:game', function (req, res){
           res.send({data2, game: game});
           //console.log(arguments);
         })
+        break;
       case "D2":
         console.log(data.response.steamid);
         request.get('http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=570&key=154CB94E9D319E3101F13AEFBA52D573&steamid=' + data.response.steamid).end(function(err, secondresponse){
@@ -30,13 +32,15 @@ router.get('/account/:username/:game', function (req, res){
           res.send({data2, game: game});
           //console.log(arguments);
         })
+        break;
       case "TF2":
         console.log(data.response.steamid);
         request.get('http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=440&key=154CB94E9D319E3101F13AEFBA52D573&steamid=' + data.response.steamid).end(function(err, secondresponse){
           var data2 = secondresponse.body;
-          res.send({data2, game: game});
+          res.send({data2, game: game, username});
           //console.log(arguments);
         })
+      break;
     } 
   })
 })

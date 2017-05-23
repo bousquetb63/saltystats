@@ -119,10 +119,10 @@
             console.log($('#stats-text'));
             switch (game) { 
               case "CSGO":
-                $('#stats-text').append("<h5>" + data.game +"</h5>");
-                $('#stats-text').append("<div class='col s3'> <p>Total Kills: " + data.data2.playerstats.stats[0].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Total Deaths: " + data.data2.playerstats.stats[1].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Total Wins: " + data.data2.playerstats.stats[5].value +"</div>");
+                $('#stats-text').append("<h5 class='col s12>" + data.game +"</h5>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Kills: " + data.data2.playerstats.stats[0].value.toFixed(2) +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Deaths: " + data.data2.playerstats.stats[1].value.toFixed(2) +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Wins: " + data.data2.playerstats.stats[5].value.toFixed(2) +"</div>");
                 $('#stats-text').append("<div class='col s3'> <p>Total Hours Played: " + (data.data2.playerstats.stats[2].value/3600).toFixed(2) +"</div>");
                 break;
               case "D2":
@@ -135,36 +135,33 @@
                 **/
                 break;
               case "TF2":
-                $('#stats-text').append("<h5>" + data.game +"</h5>");
-                $('#stats-text').append("<div class='col s3'> <p>Total Scout Kills: " + data.data2.playerstats.stats[3].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Scout: " + data.data2.playerstats.stats[4].value/60 +"</div>");
+                $('#stats-text').append("<h5 class='col s12>" + data.game +"</h5>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Scout Kills: " + data.data2.playerstats.stats[4].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Scout: " + data.data2.playerstats.stats[5].value/60 +"</div>");
                 
-                $('#stats-text').append("<div class='col s3'> <p>Total Soldier Kills: " + data.data2.playerstats.stats[17].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Soldier: " + data.data2.playerstats.stats[18].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Soldier Kills: " + data.data2.playerstats.stats[24].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Soldier: " + data.data2.playerstats.stats[25].value/60 +"</div>");
                 
-                $('#stats-text').append("<div class='col s3'> <p>Total Spy Kills: " + data.data2.playerstats.stats[33].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Spy: " + data.data2.playerstats.stats[34].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Spy Kills: " + data.data2.playerstats.stats[44].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Spy: " + data.data2.playerstats.stats[45].value/60 +"</div>");
                 
-                $('#stats-text').append("<div class='col s3'> <p>Total Spy Kills: " + data.data2.playerstats.stats[33].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Spy: " + data.data2.playerstats.stats[34].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Spy Kills: " + data.data2.playerstats.stats[64].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Spy: " + data.data2.playerstats.stats[65].value/60 +"</div>");
             
-                $('#stats-text').append("<div class='col s3'> <p>Total Pyro Kills: " + data.data2.playerstats.stats[48].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Pyro: " + data.data2.playerstats.stats[49].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Pyro Kills: " + data.data2.playerstats.stats[84].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Pyro: " + data.data2.playerstats.stats[85].value/60 +"</div>");
 
-                $('#stats-text').append("<div class='col s3'> <p>Total Medic Assists: " + data.data2.playerstats.stats[52].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Medic: " + data.data2.playerstats.stats[53].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Medic Assists: " + data.data2.playerstats.stats[104].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Medic: " + data.data2.playerstats.stats[105].value/60 +"</div>");
 
-                $('#stats-text').append("<div class='col s3'> <p>Total Demoman Kills: " + data.data2.playerstats.stats[60].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Demoman: " + data.data2.playerstats.stats[61].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Demoman Kills: " + data.data2.playerstats.stats[124].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Demoman: " + data.data2.playerstats.stats[125].value/60 +"</div>");
 
-                $('#stats-text').append("<div class='col s3'> <p>Total Heavy Kills: " + data.data2.playerstats.stats[75].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Heavy: " + data.data2.playerstats.stats[76].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Sniper Kills: " + data.data2.playerstats.stats[144].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Sniper: " + data.data2.playerstats.stats[145].value/60 +"</div>");
 
-                $('#stats-text').append("<div class='col s3'> <p>Total Engineer Kills: " + data.data2.playerstats.stats[90].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Engineer: " + data.data2.playerstats.stats[91].value/60 +"</div>");
-
-                $('#stats-text').append("<div class='col s3'> <p>Total Demoman Kills: " + data.data2.playerstats.stats[60].value +"</div>");
-                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Demoman: " + data.data2.playerstats.stats[61].value/60 +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Total Engineer Kills: " + data.data2.playerstats.stats[164].value +"</div>");
+                $('#stats-text').append("<div class='col s3'> <p>Hours Played as Engineer: " + data.data2.playerstats.stats[165].value/60 +"</div>");
                 break;
             }
           });
